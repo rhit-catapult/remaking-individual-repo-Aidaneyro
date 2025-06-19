@@ -37,18 +37,18 @@ while True:
         # Additional interactions with events
 
     # TODONE 01: Make the background white by uncommenting the line below
-    screen.fill(pygame.Color("red"))
+    screen.fill(pygame.Color("white"))
 
     # Draw things on the screen
 
     # TODONE 02: Try to draw a circle (any size, any color, anywhere)
-    pygame.draw.circle(screen, "#0255ff", (360, 280), 200, 5)
+    pygame.draw.circle(screen, "blue", (360, 280), 200, 5)
 
-    # TODO 03: Try to draw a red circle in the middle of the screen with a radius 100
-    # pygame.draw.circle(screen, color, pos, radius, width(optional)  )
+    # TODONE 03: Try to draw a red circle in the middle of the screen with a radius 100
+    pygame.draw.circle(screen, "red", (360, 280), 100, 5  )
 
     # TODO 04: Try to draw a yellow circle with the center exactly in the lower left corner of the screen, radius 10
-    # pygame.draw.circle(screen, color, pos, radius, width(optional)  )
+    pygame.draw.circle(screen, "yellow", (0, 560), 10, 5  )
 
     # This will make sure that things appear on our screen, without this
     # update, everything we do will not be visible!
