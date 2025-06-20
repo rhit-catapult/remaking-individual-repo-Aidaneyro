@@ -9,14 +9,14 @@ import random
 # DONE: Possible member variables: screen, color, x, y, radius, speed_x, speed_y
 # DONE: Methods: __init__, draw, move
 class Ball:
-    def __init__(self, screen, x, y, radius):
+    def __init__(self, screen, x, y, radius, color):
         self.screen = screen
         self.x = x
         self.y = y
         self.speed_x = 2
         self.speed_y = 5
         self.radius = radius
-
+        self.color = color
 
 
     def move(self):
@@ -28,8 +28,7 @@ class Ball:
             self.speed_x = -self.speed_x
 
     def draw(self):
-        pygame.draw.circle(self.screen, (255, 0, 0), (int(self.x), int(self.y)), 20)
-
+        pygame.draw.circle(self.screen, self.color, (int(self.x), int(self.y)), 20)
 
 def main():
     pygame.init()
@@ -39,7 +38,7 @@ def main():
     clock = pygame.time.Clock()
 
     # DONE: Create an instance of the Ball class called ball1
-    ball1 = Ball(screen, 150, 150, 20)
+    ball1 = Ball(screen, 150, 150, 20, (255, 0, 0))
 
     while True:
         clock.tick(60)
@@ -49,11 +48,10 @@ def main():
 
         screen.fill(pygame.Color('gray'))
 
-        # TODO: Move the ball
+        # DONE: Move the ball
         ball1.move()
         # DONE: Draw the ball
         ball1.draw()
-
         #print('ball x:', ball1.x, 'ball y:', ball1.y)
 
         pygame.display.update()
